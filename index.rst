@@ -1,16 +1,16 @@
 .. image:: https://i.imgur.com/3yj1n6N.png
 
 |
-**NodeBB** is a next-generation discussion platform that utilizes web sockets for instant interactions and real-time notifications. NodeBB forums have many modern features out of the box such as social network integration and streaming discussions.
+**NodeBB** 是下一代讨论平台，使用 web sockets 技术实现了即时交互和实时通知。NodeBB 论坛有很多先进的特性，比如整合社交网络和流式讨论。
 
-NodeBB is an open source project which can be forked on `GitHub <https://github.com/NodeBB/NodeBB/>`_. Don't forget to check out the ways that you can help contribute to this project, from translations, pull requests, and telling your friends.
+NodeBB 是一个开源项目，可以从 `GitHub <https://github.com/NodeBB/NodeBB/>`_ 获取代码。不要忘了帮助这个项目，比如本地化、上传改进、告诉您的朋友。
 
-Table of Contents
+目录
 =================
 
 .. _installing:
 
-Installing NodeBB
+安装 NodeBB
 -----------------
 
 .. toctree::
@@ -22,7 +22,7 @@ Installing NodeBB
 
 .. _configuring:
 
-Configuring NodeBB
+配置 NodeBB
 ------------------
 
 .. toctree::
@@ -31,7 +31,7 @@ Configuring NodeBB
     configuring/databases
     configuring/proxies
 
-Running NodeBB
+运行 NodeBB
 ------------------
 
 .. toctree::
@@ -39,7 +39,7 @@ Running NodeBB
 
     running/index
 
-Upgrading NodeBB
+升级 NodeBB
 ------------------
 
 .. toctree::
@@ -47,7 +47,7 @@ Upgrading NodeBB
 
     upgrading/index
 
-Administrating NodeBB
+管理 NodeBB
 ---------------------
 
 .. toctree::
@@ -57,7 +57,7 @@ Administrating NodeBB
     admin/sso
     admin/uploads
 
-Contributing to NodeBB
+贡献 NodeBB
 ----------------------
 
 .. toctree::
@@ -66,7 +66,7 @@ Contributing to NodeBB
     contributing/style-guide
     modules/index
 
-Plugin System
+插件系统
 -------------
 
 .. toctree::
@@ -76,7 +76,7 @@ Plugin System
     plugins/hooks
     plugins/settings
 
-Widgets System
+组件系统
 --------------
 
 .. toctree::
@@ -84,7 +84,7 @@ Widgets System
 
     widgets/create
 
-Theming Engine
+主题引擎
 --------------
 
 .. toctree::
@@ -94,7 +94,7 @@ Theming Engine
     themes/templates
 
 
-Developer's Resources
+开发者资源
 ---------------------
 
 .. toctree::
@@ -102,7 +102,7 @@ Developer's Resources
 
     resources
 
-Helping out the NodeBB Project
+帮助 NodeBB 项目
 ------------------------------
 
 .. toctree::
@@ -110,7 +110,7 @@ Helping out the NodeBB Project
 
     helping/index
 
-Troubleshooting / Help
+排错 / 帮助
 ----------------------
 
 .. toctree::
@@ -118,7 +118,7 @@ Troubleshooting / Help
 
     help/help
 
-Indices and tables
+索引、术语表
 ==================
 
 * :ref:`genindex`
