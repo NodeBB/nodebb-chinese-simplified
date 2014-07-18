@@ -120,7 +120,7 @@ SmartOS
 
         $ node app
 
-8. Visit your app!  
+8. 访问网站!  
     **例如:** 端口为 4567: ``http://0.0.0.0:4567`` or ``http://example.org:4567``
 
     **注意:** 如果端口是 `:80` 就不需要输入。 
