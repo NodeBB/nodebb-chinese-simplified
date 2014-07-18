@@ -1,82 +1,82 @@
 Windows 8
 ==========
 
-Required Software
+需要的软件
 ---------------------
 
-First, install the following programs:
+首先，需要安装一下程序:
 
 * https://windows.github.com/
 * http://nodejs.org/
 * http://sourceforge.net/projects/redis/files/redis-2.6.10/
 
-You may have to restart your computer.
+你可能需要重启电脑。
 
-Running NodeBB
+运行 NodeBB
 ---------------------
 
-Start Redis Server
+启动 Redis Server
 
-.. note::
+.. 注意::
 
-	The default location of Redis Server is
+	Redis Server 的默认位置是
 
 	**C:\\Program Files (x86)\\Redis\\StartRedisServer.cmd**
 
-Open Git Shell, and type the following commands. Clone NodeBB repo:
+打开 Git Shell, 输入以下命令. 克隆 NodeBB repo:
 
 .. code:: bash
 
     git clone https://github.com/NodeBB/NodeBB.git
 
-Enter directory: 
+进入目录: 
 
 .. code:: bash
 
     cd NodeBB
 
-Install dependencies:
+安装依赖:
 
 .. code:: bash
 
     npm install
 
-Run interactive installation:
+运行交互式安装:
 
 .. code:: bash
 
     node app.js
 
-You may leave all of the options as default.
+可以默认安装过程中的所有选项。
 
-And you're done! After the installation, run 
+到这里，你已经完成了安装! 现在运行
 
 .. code:: bash
 
     node app.js
 
-You can visit your forum at ``http://127.0.0.1:4567/``
+你可以通过 ``http://127.0.0.1:4567/`` 来访问论坛了。
 
 
-Developing on Windows
+在 Windows 上进行开发
 ---------------------
 
-It's a bit of a pain to shutdown and restart NodeBB everytime you make changes. First install supervisor:
+当你做了一些改变，并需要关闭和重启 NodeBB 时，可能稍微麻烦一些。首先安装 supervisor:
 
 .. code:: bash
 
     npm install -g supervisor
 
-Open up bash:
+打开 bash:
 
 .. code:: bash
 
     bash
 
-And run NodeBB on "watch" mode:
+在 "watch" 模式下运行 NodeBB:
 
 .. code:: bash
 
     ./nodebb watch
 
-It will launch NodeBB in development mode, and watch files that change and automatically restart your forum.
+这样就会在开发模式下运行 NodeBB，一旦文件有所改变，会自动重启论坛。
