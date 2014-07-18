@@ -2,16 +2,16 @@
 Ubuntu
 --------------------
 
-First, we install our base software stack:
+首先，我们安装基础软件包:
 
 .. code:: bash
 
 	$ sudo apt-get install git nodejs redis-server imagemagick npm
 
 
-If you want to use MongoDB, LevelDB, or another database instead of Redis please look at the :doc:`Configuring Databases <../configuring/databases>` section.
+如果你想使用 MongoDB, LevelDB, 或者其他数据库来代替 Redis, 请查阅 :doc:`Configuring Databases <../configuring/databases>` 部分.
 
-**If your package manager only installed a version of Node.js that is less than 0.8 (e.g. Ubuntu 12.10, 13.04), use ``node --version`` to determine your version of Node.js:**
+**如果你的软件管理器中安装的 Node.js 低于 0.8 (例如 Ubuntu 12.10, 13.04), 请执行 ``node --version`` 来确认你的 Node.js 版本:**
 
 
 .. code:: bash
@@ -20,7 +20,7 @@ If you want to use MongoDB, LevelDB, or another database instead of Redis please
 	$ sudo apt-get update && sudo apt-get dist-upgrade
 
 
-Next, clone this repository:
+接着，克隆这个库:
 
 
 .. code:: bash
@@ -28,7 +28,7 @@ Next, clone this repository:
 	$ git clone git://github.com/NodeBB/NodeBB.git nodebb
 
 
-Obtain all of the dependencies required by NodeBB:
+获取所有 NodeBB 需要的依赖包:
 
 .. code:: bash
 
@@ -36,7 +36,7 @@ Obtain all of the dependencies required by NodeBB:
     $ npm install
 
 
-Initiate the setup script by running the app with the ``setup`` flag:
+通过运行带有 ``setup`` 标记的程序来初始化安装代码:
 
 
 .. code:: bash
@@ -44,9 +44,9 @@ Initiate the setup script by running the app with the ``setup`` flag:
 	$ ./nodebb setup
 
 
-The default settings are for a local server running on the default port, with a redis store on the same machine/port. 
+默认设置能用于本地服务器的缺省端口，并且redis的存储也使用了同样的机器和端口。
 
-Lastly, we run the forum.
+最后，我们运行论坛.
 
 
 .. code:: bash
@@ -54,4 +54,4 @@ Lastly, we run the forum.
 	$ ./nodebb start
 
 
-NodeBB can also be started with helper programs, such as ``supervisor`` and ``forever``. :doc:`Take a look at the options here <../../running/index>`.
+NodeBB 也可以通过一些帮助程序来启动, 例如 ``supervisor`` 和 ``forever``. :doc:`Take a look at the options here <../../running/index>`.
