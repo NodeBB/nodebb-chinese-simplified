@@ -1,11 +1,11 @@
-NodeBB Installation by OS
+NodeBB 在各系统的安装
 =========================
 
-The following are step-by-step guides to help you get up and running.
+下面的内容会指导你如何一步一步建立和运行 NodeBB。
 
-.. note::
+.. 注意::
 
-    If your operating system is not listed here, please feel free to request a guide on our `community <https://community.nodebb.org>`_ or even better yet, submit one here.
+    如果下面的列表中没有你使用的操作系统，请到 `社区 <https://community.nodebb.org>`_ 发布请求。
 
 
 
