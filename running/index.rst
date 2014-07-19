@@ -1,43 +1,43 @@
 运行 NodeBB
 ================
 
-The preferred way to start and stop NodeBB is by invoking its executable:
+推荐的方式，是调用 NodeBB 自己的执行文件，来启动、停止 NodeBB：
 
 * ``./nodebb start`` 启动 NodeBB 服务器
 * ``./nodebb stop`` 停止 NodeBB 服务器
 * 或者，你可以使用 ``npm start`` 和 ``npm stop`` 做一样的事。
 
-The methods listed below are alternatives to starting NodeBB via the executable.
+下面是启动 NodeBB 的其他方法。
 
 
-Simple Node.js Process
+简单的 Node.js 进程
 -----------------------
 
-To start NodeBB, run it with ``node`` (some distributions use the executable ``nodejs``, please adjust accordingly):
+启动 NodeBB，通过 ``node`` 运行（某些发行版使用 ``nodejs``，请按情况调整）：
 
 .. code:: bash
 
     $ cd /path/to/nodebb/install
     $ node app
 
-However, bear in mind that crashes will cause the NodeBB process to halt, bringing down your forum. Consider some of the more reliable options, below:
+然后, 记住异常会导致 NodeBB 进程退出，导致你的论坛宕机。可以考虑使用下面这些更可靠的方案:
 
-Supervisor Process
+Supervisor 进程
 -----------------------
 
-Using the `supervisor package <https://github.com/isaacs/node-supervisor>`_, you can have NodeBB restart itself if it crashes:
+使用 `supervisor 包 <https://github.com/isaacs/node-supervisor>`_，你能在 NodeBB 异常时，自动重启 NodeBB：
 
 .. code:: bash
 
     $ npm install -g supervisor
     $ supervisor app
 
-As ``supervisor`` by default continues to pipe output to ``stdout``, it is best suited to development builds.
+缺省情况下，``supervisor`` 持续将输出通过管道发给 ``stdout``，它最适合开发版本。
 
-Forever Daemon
+Forever 后台程序
 -----------------------
 
-Another way to keep NodeBB up is to use the `forever package <https://github.com/nodejitsu/forever>`_ via the command line interface, which can monitor NodeBB and re-launch it if necessary:
+另一个保持 NodeBB 运行的方法，是使用 `forever 包 <https://github.com/nodejitsu/forever>`_ 。通过命令行接口，forever 可以监视 NodeBB，在需要的时候重启 NodeBB：
 
 .. code:: bash
 
