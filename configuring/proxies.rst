@@ -1,7 +1,7 @@
-Configuring Web Server / Proxies
+配置 Web 服务器 / 代理
 ================================
 
-Here a few options that you can use to proxy your NodeBB forum.
+你可以对你的 NodeBB 论坛使用代理，这里有一些解决方案。
 
 .. toctree::
     :hidden:

@@ -1,31 +1,31 @@
-Configuring nginx as a proxy
+配置 nginx 为代理
 ============================
 
-NodeBB by default runs on port ``4567``, meaning that builds are usually accessed using a port number in addition to their hostname:
+NodeBB 默认运行在 ``4567`` 端口，这意味着可以用主机名加端口来访问：
 
 .. code::
 
     http://example.org:4567
 
-In order to allow NodeBB to be served without a port, nginx can be set up to proxy all requests to a particular hostname (or subdomain) to an upstream NodeBB build running on any port.
+为了让 NodeBB 不通过端口直接提供服务，不论 NodeBB 运行在哪个端口，都可以通过配置 nginx ，将指定主机名（或子域名）的所有请求代理转发给 NodeBB 上游。
 
-Requirements
+必需组件
 ------------
 
-* NGINX version v1.3.13 or greater
-    * Package managers may not provide a new enough version. To get the latest version, `compile it yourself <http://nginx.org/en/download.html>`_, or if on Ubuntu, use the `NGINX Stable <https://launchpad.net/~nginx/+archive/stable>`_ or `NGINX Development <https://launchpad.net/~nginx/+archive/development>`_ PPA builds, if you are on Debian, use `DotDeb repository <http://www.dotdeb.org/instructions/>`_ to get the latest version of Nginx.
-    * To determine your nginx version, execute ``nginx -V`` in a shell
+* NGINX 版本 v1.3.13 或更高
+    * 包管理器可能没有提供足够新的版本。获取最新的版本，`自行编译 <http://nginx.org/en/download.html>`_，或者 Ubuntu 上,，使用 `NGINX 稳定版 <https://launchpad.net/~nginx/+archive/stable>`_ 或者 `NGINX 开发版 <https://launchpad.net/~nginx/+archive/development>`_ PPA 构建，如果在 Debian 上，使用 `DotDeb 库 <http://www.dotdeb.org/instructions/>`_ 来获取 Nginx 的最新版本。
+    * 确认你的 nginx 版本，在命令行下执行 ``nginx -V``
 
-Configuration
+配置
 ------------
 
-NGINX-served sites are contained in a ``server`` block. This block of options goes in a specific place based on how nginx was installed and configured:
+NGINX 服务的网站设置在 ``server`` 区块。基于 nginx 的安装和配置，此区块的选项有些不同的地方：
 
-* ``/path/to/nginx/sites-available/*`` -- files here must be aliased to ``../sites-enabled``
-* ``/path/to/nginx/conf.d/*.conf`` -- filenames must end in ``.conf``
-* ``/path/to/nginx/httpd.conf`` -- if all else fails
+* ``/path/to/nginx/sites-available/*`` -- 这里的文件必需链接到 ``../sites-enabled``
+* ``/path/to/nginx/conf.d/*.conf`` -- 文件名结尾必须是 ``.conf``
+* ``/path/to/nginx/httpd.conf`` -- 必需全部配置正确，否则会启动失败
 
-Below is the basic nginx configuration for a NodeBB build running on port ``4567``:
+下面是基本的 nginx 配置，NodeBB 运行在 ``4567`` 端口：
 
 .. code:: nginx
 
@@ -51,10 +51,10 @@ Below is the basic nginx configuration for a NodeBB build running on port ``4567
     }
 
 
-Notes
+注释
 ------------
 
-* Remember to also edit `config.json` and change `use_port` from `true` to `false`
-* nginx must be on version 1.4.x to properly support websockets. Debian/Ubuntu use 1.2, although it will work there will be a reduction in functionality.
-* The ``proxy_pass`` IP should be ``127.0.0.1`` if your NodeBB is hosted on the same physical server as your nginx server. Update the port to match your NodeBB, if necessary.
-* This config sets up your nginx server to listen to requests for ``forum.example.org``. It doesn't magically route the internet to it, though, so you also have to update your DNS server to send requests for ``forum.example.org`` to the machine with nginx on it!
+* 记得要编辑 `config.json` 把 `use_port` 从 `true` 修改为 `false`
+* nginx 版本高于 1.4.x 才能完全支持 websockets。Debian/Ubuntu 使用 1.2 版本，NodeBB 一样能够运行，因为有降级机制。
+* 如果你的 NodeBB 在和 nginx 是用一台物理机运行，那么 ``proxy_pass`` 的 IP 应该是 ``127.0.0.1``。根据你的 NodeBB 的配置，更改匹配的的端口号。
+* 这个配置能设置您的 nginx 服务器监听 ``forum.example.org`` 的请求。但它不能把互联网路由到这里，所以，你还需要更新你的 DNS 服务器，把 ``forum.example.org`` 设置为 nginx 对应的机器！
