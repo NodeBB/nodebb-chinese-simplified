@@ -1,11 +1,11 @@
-Installing NodeBB on the Cloud
+云端安装 NodeBB
 ==============================
 
-The following are step-by-step guides to help you get up and running on the cloud using popular PaaS solutions.
+下面的内容会指导你采用流行的 PaaS 解决方案一步一步在云端建立和运行 NodeBB。
 
-.. note::
+.. 注意::
 
-    If the PaaS solution of your choice is not listed here, please feel free to request a guide on our `community <https://community.nodebb.org>`_ or even better yet, submit one here.
+    如果这里没有你采用的 PaaS 解决方案, 请到 `社区 <https://community.nodebb.org>`_ 发布请求。
 
 
 
@@ -19,4 +19,4 @@ The following are step-by-step guides to help you get up and running on the clou
 * :doc:`Heroku <cloud/heroku>`
 * :doc:`Cloud9 <cloud/cloud9>`
 * :doc:`Openshift <cloud/openshift>`
-* `Digital Ocean <http://burnaftercompiling.com/nodebb/setting-up-a-nodebb-forum-for-dummies/>`_ (external)
+* `Digital Ocean <http://burnaftercompiling.com/nodebb/setting-up-a-nodebb-forum-for-dummies/>`_ (外部链接)

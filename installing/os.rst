@@ -22,4 +22,4 @@ NodeBB 在不同系统的安装
 * :doc:`Debian <os/debian>`
 * :doc:`SmartOS <os/smartos>`
 * :doc:`Windows <os/windows8>`
-* `CentOS <https://blog.tommyparnell.com/installing-nodebb-on-centos-6-5/>`_ (external)
+* `CentOS <https://blog.tommyparnell.com/installing-nodebb-on-centos-6-5/>`_ (外部链接)
