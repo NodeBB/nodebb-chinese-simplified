@@ -1,11 +1,11 @@
-Running NodeBB
+运行 NodeBB
 ================
 
 The preferred way to start and stop NodeBB is by invoking its executable:
 
-* ``./nodebb start`` Starts the NodeBB server
-* ``./nodebb stop`` Stops the NodeBB server
-* Alternatively, you may use ``npm start`` and ``npm stop`` to do the same
+* ``./nodebb start`` 启动 NodeBB 服务器
+* ``./nodebb stop`` 停止 NodeBB 服务器
+* 或者，你可以使用 ``npm start`` 和 ``npm stop`` 做一样的事。
 
 The methods listed below are alternatives to starting NodeBB via the executable.
 
