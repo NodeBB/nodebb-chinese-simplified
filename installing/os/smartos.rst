@@ -130,4 +130,4 @@ SmartOS
 升级 NodeBB
 ----------------
 
-**注意:** 详细的升级说明请参考 :doc:`Upgrading NodeBB <../../upgrading/index>`.
+**注意:** 详细的升级说明请参考 :doc:`升级 NodeBB <../../upgrading/index>`.

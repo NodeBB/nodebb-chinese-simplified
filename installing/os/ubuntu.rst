@@ -54,4 +54,4 @@ Ubuntu
 	$ ./nodebb start
 
 
-NodeBB 也可以通过一些帮助程序来启动, 例如 ``supervisor`` 和 ``forever``. :doc:`Take a look at the options here <../../running/index>`.
+NodeBB 也可以通过一些帮助程序来启动, 例如 ``supervisor`` 和 ``forever``. :doc:`去这里看看 <../../running/index>`.
