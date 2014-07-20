@@ -1,9 +1,9 @@
-Administrative Functions
+管理功能
 ========================
 
 .. note::
 
-    These docs are out of date. If you are interested in updating these (preferably with screenshots) let us know on the `community forum <https://community.nodebb.org>`_ because we are planning on a design overhaul of the ACP soon.
+    此文档已过时。（译者：暂时不翻译了）If you are interested in updating these (preferably with screenshots) let us know on the `community forum <https://community.nodebb.org>`_ because we are planning on a design overhaul of the ACP soon.
 
 
 **To view the admin panel** (if you are an admin): `http://your_nodebb_domain.com/admin`
