@@ -1,11 +1,13 @@
-Settings Framework
+设置框架
 ==========================
 
+如果您需要让您的插件定制化，您可以使用 NodeBB 提供的设置框架。
 If you want to make your plugin customizable you may use the Settings Framework NodeBB offers.
 
-Server-Side Access
+服务端访问
 ------------------
 
+首先您需要一些默认设置，只需要像这样创建一个新对象：
 First you need some default settings, just create a new object for this:
 
 .. code:: javascript

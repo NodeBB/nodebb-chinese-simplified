@@ -7,12 +7,12 @@ If you're afraid of running out of memory by using Redis, or want your forum to 
 
 **Note:** If you have to add ``sudo`` to any command, do so. No one is going to hold it against you ;)
 
-Step 1: Install MongoDB
+第 1 步：安装 MongoDB
 -------------------------
 
-The latest and greatest MongoDB is required (or at least greater than the package manager). The instructions to install it can be found on the `MongoDB manual <http://docs.mongodb.org/manual/administration/install-on-linux/>`_).
+需要最新版的 MongoDB (或者至少高于包管理器的版本)。安装步骤可以参阅 `MongoDB 手册 <http://docs.mongodb.org/manual/administration/install-on-linux/>`_)。
 
-Step 2: Install node.js
+第 2 步：安装 node.js
 -------------------------
 
 Like MongoDB, the latest and greatest node.js is required (or at least greater than the package manager), so I'm leaving this to the official wiki. The instructions to install can be found on `Joyent <https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager>`_.
