@@ -1,79 +1,79 @@
-Available Hooks
+可用的钩子
 =============
 
-The following is a list of all hooks present in NodeBB. This list is intended to guide developers who are looking to write plugins for NodeBB. For more information, please consult :doc:`Writing Plugins for NodeBB <create>`.
+下面是 NodeBB 中现有的所有钩子的列表。此列表作为插件开发者的手册。更多信息，请查看 :doc:`编写 NodeBB 插件 <create>`.
 
-There are two types of hooks, **filters**, and **actions**. Filters take an input (provided as a single argument), parse it in some way, and return the changed value. Actions take multiple inputs, and execute actions based on the inputs received. Actions do not return anything.
+共有两类钩子，**过滤器**，和 **动作** 。过滤器处理单个输入 (提供了一个参数)，按某种方式解析后，返回修改后的值。动作处理多个输入，执行的动作由接受的输入决定。动作没有返回值。
 
-**Important**: This list is by no means exhaustive. Hooks are added on an as-needed basis (or if we can see a potential use case ahead of time), and all requests to add new hooks to NodeBB should be sent to us via the `issue tracker <https://github.com/NodeBB/NodeBB/issues>`_.
+**重要**: 此列表并不详尽。需要的时候会增加新的钩子 (或者我们在今后能看到使用示例)，所有添加新钩子的需求应该通过 `问题跟踪 <https://github.com/NodeBB/NodeBB/issues>`_ 发给我们。
 
 
-Filters
+过滤器
 ----------
 
 ``filter:admin.header_build``
 ^^^^^^^^^^^^^^^^^^^^^
 
-Allows plugins to create new navigation links in the ACP
+运行插件在 ACP 中创建新的导航链接
 
 ``filter:post.save``
 ^^^^^^^^^^^^^^^^^^^^^
 
-**Argument(s)**: A post's content (markdown text)
+**参数**: 帖子内容 (markdown 文本)
 
-Executed whenever a post is created or edited, but before it is saved into the database.
+当帖子创建或者编辑时，写入数据库之前执行。
 
 ``filter:post.get``
 ^^^^^^^^^^^^^^^^^^^^^
 
-**Argument(s)**: A post object (javascript Object)
+**参数**: 帖子对象 (javascript 对象)
 
-Executed whenever a post is retrieved, but before being sent to the client.
+帖子从数据库取回后，发送到客户端之前执行。
 
 ``filter:header.build``
 ^^^^^^^^^^^^^^^^^^^^^
 
-**Allows plugins to add new navigation links to NodeBB**
+**允许插件在 NodeBB 中添加新的导航链接**
 
 ``filter:register.build``
 ^^^^^^^^^^^^^^^^^^^^^
 
-**Argument(s)**:
- - `req` the express request object (javascript Object)
- - `res` the express response object (javascript Object)
- - `data` the data passed to the template (javascript Object)
+**参数**:
+ - `req` express 请求对象 (javascript 对象)
+ - `res` express 响应对象 (javascript 对象)
+ - `data` 传递给模板的数据 (javascript 对象)
 
-**Allows plugins to add new elements to the registration form. At the moment, the only one supported is `data.captcha`**
+**允许插件在注册表单中添加新的元素。现在，支持持 `data.captcha`**
 
 
 ``filter:post.parse``
 ^^^^^^^^^^^^^^^^^^^^^
 
-**Argument(s)**: A post or signature's raw text (String)
+**参数**: 帖子或者签名档原始文本 (字符串)
 
-Executed when a post or signature needs to be parsed from raw text to HTML (for output to client). This is useful if you'd like to use a parser to prettify posts, such as `Markdown <http://daringfireball.net/projects/markdown/>`_, or `BBCode <http://www.bbcode.org/>`_.
+当帖子或签名档，从原始文本解析为 HTML (输出给客户端的内容) 时执行。可用调用更漂亮的解析器，例如 `Markdown <http://daringfireball.net/projects/markdown/>`_，或者 `BBCode <http://www.bbcode.org/>`_。
 
 ``filter:posts.custom_profile_info``
 ^^^^^^^^^^^^^^^^^^^^^
 
-**Allows plugins to add custom profile information in the topic view's author post block**
+**允许插件，在主题作者的帖子区块中，添加自定义的资料信息**
 
 
 ``filter:register.check``
 ^^^^^^^^^^^^^^^^^^^^^
 
-**Argument(s)**:
- - `req` the express request object (javascript Object)
- - `res` the express response object (javascript Object)
- - `userData` the user data parsed from the form
+**参数**:
+ - `req` express 请求对象 (javascript 对象)
+ - `res` express 响应对象 (javascript 对象)
+ - `userData` 从表单解析的用户数据
 
-**Allows plugins to run checks on information and deny registration if necessary.**
+**允许用户检查信息，并且在需要时拒绝注册。**
 
 
 ``filter:scripts.get``
 ^^^^^^^^^^^^^^^^^^^^^
 
-**Allows to add client-side JS to the header and queue up for minification on production**
+**允许在头部添加客户端 JS，生产环境会自动进行压缩处理**
 
 
 ``filter:uploadImage``
@@ -129,7 +129,7 @@ Executed when a post or signature needs to be parsed from raw text to HTML (for 
 
 ``filter:user.verify.code``
 ^^^^^^^^^^^^^^^^^^^^^
-Parameters: confirm_code
+参数: confirm_code
 
 Ability to modify the generated verification code (ex. for using a shorter verification code instead for SMS verification)
 
