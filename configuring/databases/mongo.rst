@@ -15,11 +15,11 @@ If you're afraid of running out of memory by using Redis, or want your forum to 
 第 2 步：安装 node.js
 -------------------------
 
-Like MongoDB, the latest and greatest node.js is required (or at least greater than the package manager), so I'm leaving this to the official wiki. The instructions to install can be found on `Joyent <https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager>`_.
+和 MongoDB 一样，需要, the latest and greatest node.js is required (or at least greater than the package manager), so I'm leaving this to the official wiki. The instructions to install can be found on `Joyent <https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager>`_.
 
 **Note: NPM is installed along with node.js, so there is no need to install it separately**
 
-Step 3: Install the Base Software Stack
+第 3 步: 安装基础软件
 -------------------------
 
 Enter the following into the terminal to install the base software required to run NodeBB:
@@ -28,7 +28,7 @@ Enter the following into the terminal to install the base software required to r
 
     # apt-get install git build-essential imagemagick
 
-Step 4: Clone the Repository
+第 4 步: 克隆代码库
 -------------------------
 
 Enter the following into the terminal, replacing `/path/to/nodebb/install/location` to where you would like NodeBB to be installed.
@@ -38,7 +38,7 @@ Enter the following into the terminal, replacing `/path/to/nodebb/install/locati
     $ cd /path/to/nodebb/install/location
     $ git clone git://github.com/NodeBB/NodeBB.git nodebb
 
-Step 5: Install The Required NodeBB Dependencies
+第 5 步: 安装 NodeBB 依赖的软件
 -------------------------
 
 Go into the newly created `nodebb` directory and install the required dependencies by entering the following.
@@ -48,47 +48,47 @@ Go into the newly created `nodebb` directory and install the required dependenci
     $ cd nodebb
     $ npm install
 
-Step 6: Adding a New Database With Users
+第 6 步: 添加新数据库
 -------------------------
 
-To go into the MongoDB command line, type:
+进入 MongoDB 命令行，输入：
 
 .. code:: bash
 
     $ mongo
 
-To add a new database called `nodebb`, type:
+添加数据库，命名为 `nodebb`，输入：
 
 .. code::
 
     > use nodebb
 
-To add a user to access the `nodebb` database, type:
+添加访问 `nodebb` 数据库的用户，输入：
 
 .. code::
 
     > db.createUser( { user: "nodebb",
-    ...       pwd: "<Enter in a secure password>",
+    ...       pwd: "<输入密码>",
     ...       roles: [ "readWrite" ] } )
 
-**Note:** The role ``readWrite`` provides read or write any collection within a specific database to user.
+**提示:** 角色 ``readWrite`` 将制定数据库的读或写任何集合(collection)的权限付给用户。
 
-Step 7: Configure MongoDB
+第 7 步: 配置 MongoDB
 -------------------------
 
-MongoDB needs text search enabled. Modify ``/etc/mongodb.conf``.
+MongoDB 需要启用文本搜索。修改 ``/etc/mongodb.conf``。
 
 .. code::
 
     # nano /etc/mongodb.conf
 
-Add ``setParameter=textSearchEnabled=true`` to the end. Also, to enable authentication, uncomment ``auth = true``. Restart MongoDB.
+在末尾添加 ``setParameter=textSearchEnabled=true``。并且启用认证，取消注释 ``auth = true``。然后重启 MongoDB。
 
 .. code::
 
     # service mongodb restart
 
-Step 8: Configuring NodeBB
+第 8 步: 配置 NodeBB
 -------------------------
 
 Make sure you are in your NodeBB root folder. If not, just type:
