@@ -3,12 +3,12 @@
 |
 **NodeBB** 是下一代讨论平台，使用 web sockets 技术实现了即时交互和实时通知。NodeBB 论坛有很多先进的特性，比如整合社交网络和流式讨论。
 
-NodeBB 是一个开源项目，可以从 `GitHub <https://github.com/NodeBB/NodeBB/>`_ 获取代码。不要忘了帮助这个项目，比如本地化、上传改进、告诉您的朋友。
+NodeBB 是一个开源项目，可以从 `GitHub <https://github.com/NodeBB/NodeBB/>`_ 获取代码。不要忘了帮助这个项目，比如本地化、上传改进、告诉你的朋友。
 
 目录
 =================
 
-.. _installing:
+.. _安装:
 
 安装 NodeBB
 -----------------
@@ -20,7 +20,7 @@ NodeBB 是一个开源项目，可以从 `GitHub <https://github.com/NodeBB/Node
    installing/cloud
 
 
-.. _configuring:
+.. _配置:
 
 配置 NodeBB
 ------------------
