@@ -41,34 +41,34 @@ Git 地址后面的 nodebb 命令会创建一个名为 nodebb 的文件夹。完
 	
 	node app --setup
 
-安装使用的 URL 应设置为 'http://workspace_name-c9-username.c9.io', 用你的空间名替换 workspace_name ，用户名不变。 Note that as NodeBB is currently using unsecure http for loading jQuery you will find it much easier using http:// instead of https:// for your base url. Otherwise jQuery won't load and NodeBB will break.
+安装使用的 URL 应设置为 'http://workspace_name-c9-username.c9.io', 用你的空间名替换 workspace_name ，username 与你注册的一致。 请注意 NodeBB 当前采用未加密的 http 来读取 jQuery，是因为使用 http:// 比 使用 https:// 更为方便。 否则 jQuery 不会加载， NodeBB 也会崩溃。
 
-Port number isn't so important - Cloud9 may force you to use port 80 anyway. Just set it to 80. If this is another port, like 4567, that is also fine.
+端口号不是那么重要 - Cloud9 可能你强制使用80端口，建议按此设置。如果你想设置为其他端口，例如4567，那也是可以的。 
 
-Use a port number to access NodeBB? Again, this doesn't seem to make a big difference. Set this to no. Either will work.
+使用端口号来访问 NodeBB? 没有设么太大的区别，设置为 No。如果不这样设置也是可以的。
 
-Host IP or address of your Redis instance: localhost (the output of the $IP Command is also acceptable)
+Redis 进程的主机 IP: localhost ($IP 命令的结果也可以用)
 
-IP or Hostname to bind to: Enter what your $IP value holds here found in 步骤 4. It should look something like: 123.4.567.8
+要绑定的 IP 地址或主机名: Enter what your $IP value holds here found in 输入步骤 4中 $IP 命令的结果，类似于: 123.4.567.8
 
-Host port of your Redis instance: 16379
+Redis 进程的主机端口: 16379
 
-Redis Password: Unless you have set one manually, Redis will be configured without a password. Leave this blank and press enter
+Redis 密码: 除非你手动设置密码，Redis 默认不会设置密码。这项留空或直接按 Enter
 
-First-time set-up will also require an Admin name, email address and password to be set.
+第一次运行时也需要设置一个 Admin 名称，email 地址 和密码。
 
-And you're good to go! Don't use the Run button at the top if the IDE, it has been a little buggy for me. Besides, you're better off using the command line anyway. Run:
+到底这里你已经大功告成了! 不要使用 IDE 顶部的 Run 按钮, 建议使用命令行。运行:
 
 .. code:: bash
 	
 	node app
 
-And then open http://workspace_name-c9-username.c9.io in your browser.
+然后在浏览器中打开 http://workspace_name-c9-username.c9.io
 
-Troubleshooting
+疑难解答
 ---------------
 
-A common problem is that the database hasn't been started. Make sure you have set Redis up correctly and ran 
+最常见的问题是数据库没有启动. 请确定已经正确设置了 Redis，然后运行 ：
 
 .. code:: bash
 	
