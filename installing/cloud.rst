@@ -19,4 +19,5 @@
 * :doc:`Heroku <cloud/heroku>`
 * :doc:`Cloud9 <cloud/cloud9>`
 * :doc:`Openshift <cloud/openshift>`
+* :doc:`Nitrous.IO <cloud/nitrous>`
 * `Digital Ocean <http://burnaftercompiling.com/nodebb/setting-up-a-nodebb-forum-for-dummies/>`_ (外部链接)
