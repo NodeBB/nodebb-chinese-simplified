@@ -1,7 +1,7 @@
 LevelDB
 =======
 
-根据你的操作系统，安装 :doc:`安装指南 <../../installing/os>` 进行安装，跳过 Redis 安装一节。
+根据你的操作系统，按照 :doc:`安装指南 <../../installing/os>` 进行安装，跳过安装 Redis 一节。
 
 在克隆 NodeBB 代码后，你需要运行：
 
