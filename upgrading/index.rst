@@ -1,13 +1,13 @@
-Upgrading NodeBB
+升级 NodeBB
 ======================
 
-NodeBB's periodic releases are located in the `Releases <https://github.com/NodeBB/NodeBB/releases>`_. These releases contain what is usually considered the most bug-free code, and is designed to be used on production-level instances of NodeBB.
+NodeBB 定期发布版本于 `发布版 <https://github.com/NodeBB/NodeBB/releases>`_。 这些发布版包含高质量的代码，可用于生产环境部署。
 
-You can utilise git to install a specific version of NodeBB, and upgrade periodically as new releases are made.
+你可以使用 git 安装指定版本的 NodeBB，以及周期性升级到新发布版。
 
-To obtain the latest fixes and features, you can also ``git clone`` the latest version directly from the repository (``master`` branch), although its stability cannot be guaranteed. Core developers will attempt to ensure that every commit results in a working client, even if individual features may not be 100% complete.
+如需获得最新的修订和特性，你也可以使用 ``git clone`` 直接从代码库(``master`` 分支) 克隆代码，不过这样不能保证程序的稳定性。核心开发者会在工作环境上，验证每次代码提交，虽然个别特性还没 100% 完成。
 
-***As always***, the NodeBB team is not responsible for any misadventures, loss of data, data corruption, or any other bad things that may arise due to a botched upgrade - so please **don't forget to back up** before beginning!
+***一如既往***， NodeBB 团队不会为，可能由于升级引起的，任何意外、数据丢失、数据损坏、或者任何坏的情况负责。所以请在升级之前，**不要忘记备份**！
 
 Upgrade Path
 -------------------
