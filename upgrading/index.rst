@@ -47,7 +47,7 @@ Execute steps 1 through 4.
 
 **提示**: After upgrading between revisions (i.e. v0.0.4 to v0.0.5), it may be necessary to run the following upgrade steps to ensure that any data schema changes are properly upgraded as well:
 
-1. 关闭你的论坛
+1. 关闭论坛
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
 While it is possible to upgrade NodeBB while it is running, it is definitely not recommended, particularly if it is an active forum:
@@ -58,7 +58,7 @@ While it is possible to upgrade NodeBB while it is running, it is definitely not
 	$ ./nodebb stop
 
 
-2. 备份你的数据
+2. 备份数据
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. note:: 
@@ -107,10 +107,10 @@ As LevelDB is simply a collection of flat files, just copy the database over to 
     cd /path/to/nodebb/public
     tar -czf ~/nodebb_assets.tar.gz ./uploads
 
-3. Grab the latest and greatest code
+3. 获取最新代码
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Navigate to your NodeBB: ``$ cd /path/to/nodebb``.
+进入 NodeBB 目录：``$ cd /path/to/nodebb``。
 
 If you are upgrading from a lower branch to a higher branch, switch branches as necessary. ***Make sure you are completely up-to-date on your current branch!***.
 
@@ -132,22 +132,22 @@ This should retrieve the latest (and greatest) version of NodeBB from the reposi
 
 Alternatively, download and extract the latest versioned copy of the code from `the Releases Page <https://github.com/NodeBB/NodeBB/releases>`_. Overwrite any files as necessary. This method is not supported.
 
-4. Run the NodeBB upgrade script
+4. 运行 NodeBB 升级脚本
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-This script will install any missing dependencies, upgrade any plugins or themes (if an upgrade is available), and migrate the database if necessary.
+脚本会安装缺失的依赖软件包，升级任何插件或主题 (如果存在新版)，视情况迁移数据库。
 
 .. code:: bash
 
     $ ./nodebb upgrade
 
-**Note**: ``./nodebb upgrade`` is only available after v0.3.0. If you are running an earlier version, run these instead:
+**Note**: ``./nodebb upgrade`` 只在 v0.3.0 后可用。如果你运行的是更早的版本，可运行下面的命令：
 
 * ``npm install``
 * ``ls -d node_modules/nodebb* | xargs -n1 basename | xargs npm update``
 * ``node app --upgrade``
 
-6. Start up NodeBB & Test!
+6. 启动 NodeBB、测试！
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-You should now be running the latest version of NodeBB.
+你现在可以运行最新版本的 NodeBB 了。
