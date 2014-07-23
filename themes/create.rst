@@ -1,28 +1,28 @@
-Creating a new NodeBB Theme
+创建新的 NodeBB 主题
 ===========================
 
-NodeBB is built on `Twitter Bootstrap <twitter.github.com/bootstrap/>`_, which makes theming incredibly simple.
+NodeBB 是基于 `Twitter Bootstrap <twitter.github.com/bootstrap/>`_ 构建的。Bootstrap 使得主题制作非常简单。
 
-Packaging for NodeBB
+为 NodeBB 打包
 -------------------------------------
 
-NodeBB expects any installed themes to be installed via ``npm``. Each individual theme is an npm package, and users can install themes through the command line, ex.:
+NodeBB 期望通过 ``npm`` 安装任何主题。每个单独的主题是一个 npm 包，用户可以使用命令行来安装主题，例如：
 
 .. code:: bash
 
     npm install nodebb-theme-modern-ui
 
-The theme's folder must contain at least two files for it to be a valid theme:
+主题的文件夹下必须包含至少两个文件，才认为是合法的主题。
 
 1. ``theme.json``
 
 2. ``theme.less``
 
-``theme.less`` is where your theme's styles will reside. NodeBB expects LESS to be present in this file, and will precompile it down to CSS on-demand. For more information regarding LESS, take a look at `the project homepage <http://lesscss.org/>`_.
+``theme.less`` 是存放主题样式的地方。NodeBB 期望这个文件使用 LESS 编写，并且可以按需要预编译为CSS。如需查看更多 LESS 的信息，请访问 `LESS 的主页 <http://lesscss.org/>`_。
 
-**Note**: A *suggested* organization for ``theme.less`` is to ``@import`` multiple smaller files instead of placing all of the styles in the main ``theme.less`` file.
+**提示**: A *suggested* organization for ``theme.less`` is to ``@import`` multiple smaller files instead of placing all of the styles in the main ``theme.less`` file.
 
-Configuration
+配置
 -------------------------------------
 The theme configuration file is a simple JSON string containing all appropriate meta data regarding the theme. Please take note of the following properties:
 
@@ -32,7 +32,7 @@ The theme configuration file is a simple JSON string containing all appropriate 
 * ``screenshot``: A filename (in the same folder) that is a preview image (ideally, 370x250, or an aspect ratio of 1.48:1)
 * ``url``: A fully qualified URL linking back to the theme's homepage/project
 
-Child Themes
+子主题
 -------------------------------------
 
 If your theme is based off of another theme, simply modify your LESS files to point to the other theme as a base:
