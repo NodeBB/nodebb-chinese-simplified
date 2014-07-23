@@ -76,13 +76,13 @@ Go into the newly created `nodebb` directory and install the required dependenci
 第 7 步: 配置 MongoDB
 -------------------------
 
-MongoDB 需要启用文本搜索。修改 ``/etc/mongodb.conf``。
+修改 ``/etc/mongodb.conf``。
 
 .. code::
 
     # nano /etc/mongodb.conf
 
-在末尾添加 ``setParameter=textSearchEnabled=true``。并且启用认证，取消注释 ``auth = true``。然后重启 MongoDB。
+启用认证，取消注释 ``auth = true``。然后重启 MongoDB。
 
 .. code::
 
