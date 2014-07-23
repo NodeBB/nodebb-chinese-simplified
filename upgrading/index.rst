@@ -9,24 +9,24 @@ NodeBB 定期发布版本于 `发布版 <https://github.com/NodeBB/NodeBB/releas
 
 ***一如既往***， NodeBB 团队不会为，可能由于升级引起的，任何意外、数据丢失、数据损坏、或者任何坏的情况负责。所以请在升级之前，**不要忘记备份**！
 
-Upgrade Path
+升级路径
 -------------------
 
-NodeBB's upgrade path is designed so that upgrading between versions is straightforward. NodeBB will provide upgrade compatibility (via the ``--upgrade`` flag) between the latest version of a lower branch and the latest version of the higher branch. For example, if ``v0.2.2`` is the latest version in the ``v0.2.x`` branch, you can switch to the ``v0.3.x`` branch and suffer no ill effects. Upgrading from ``v0.2.0`` to ``v0.3.x`` is not supported, and NodeBB will warn you when attempting to upgrade that you are not upgrading cleanly.
+NodeBB 的升级路径设计为，在不同版本之间升级是直接的。NodeBB 会提供高版本分支和低版本分支直接的升级兼容 (通过 ``--upgrade`` 标记)。例如， 如果 ``v0.2.2`` 是 ``v0.2.x`` 分支的最新版本，你可以无痛切换到 ``v.0.3.x`` 分支'。而从 ``v0.2.0`` 升级到 ``v0.3.x`` 是不支持的，同时 NodeBB 会在你尝试升级时，警告升级不正确。
 
-Upgrading between patch revisions
+在补丁版本间升级
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-*e.g. v0.1.0 to v0.1.1*
+*例如，从 v0.1.0 升级到 v0.1.1*
 
 Patch revisions contain bugfixes and other minor changes. Updating to the latest version of code for your specific version branch is all that is usually required.
 
-**Execute steps 1 through 3.**
+**执行第1步到第3步。**
 
 Upgrading between minor revisions
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-*e.g. v0.1.3 to v0.2.0*
+*例如，从 v0.1.3 升级到 v0.2.0*
 
 Minor revisions contain new features or substantial changes that are still backwards compatible. They may also contain dependent packages that require upgrading, and other features may be deprecated (but would ideally still be supported).
 
@@ -42,12 +42,12 @@ Execute steps 1 through 4.
 
 	Execute all of the steps.
 
-Upgrade Steps
+升级步骤
 -------------------
 
-**Note**: After upgrading between revisions (i.e. v0.0.4 to v0.0.5), it may be necessary to run the following upgrade steps to ensure that any data schema changes are properly upgraded as well:
+**提示**: After upgrading between revisions (i.e. v0.0.4 to v0.0.5), it may be necessary to run the following upgrade steps to ensure that any data schema changes are properly upgraded as well:
 
-1. Shut down your forum
+1. 关闭你的论坛
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
 While it is possible to upgrade NodeBB while it is running, it is definitely not recommended, particularly if it is an active forum:
@@ -58,24 +58,24 @@ While it is possible to upgrade NodeBB while it is running, it is definitely not
 	$ ./nodebb stop
 
 
-2. Back up your data
+2. 备份你的数据
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. note:: 
 
-	This section is incomplete, please take care to back up your files properly!
+	此节未完成，请正确备份你的文件！
 
 
-Backing up Redis
+备份 Redis
 ~~~~~~~~~~~~~~
 
-As with all upgrades, the first step is to **back up your data**! Nobody likes database corruption/misplacement.
+对于所有的升级，第一步就是 **备份你的数据** ！没人喜欢数据库损坏。
 
-All of the textual data stored in NodeBB is found in a ``.rdb`` file. On typical installs of Redis, the main database is found at ``/var/lib/redis/dump.rdb``.
+NodeBB中，所有的文本数据都在 ``.rdb`` 文件中。在通常安装的 Redis 上，主数据库在  ``/var/lib/redis/dump.rdb``。
 
 **Store this file somewhere safe.**
 
-Backing up MongoDB
+备份 MongoDB
 ~~~~~~~~~~~~~~
 
 To run a backup of your complete MongoDB you can simply run
@@ -86,7 +86,7 @@ which will create a directory structure that can be restored with the `mongorest
 
 It is recommended that you first shut down your database. On Debian / Ubuntu it's likely to be: `sudo service mongodb stop`
 
-Backing up LevelDB
+备份 LevelDB
 ~~~~~~~~~~~~~~
 
 As LevelDB is simply a collection of flat files, just copy the database over to a safe location, ex.
@@ -97,10 +97,10 @@ As LevelDB is simply a collection of flat files, just copy the database over to 
 
 **Store this file somewhere safe.**
 
-Avatars
+头像
 ~~~~~~~~~~~~~~
 
-Uploaded images (avatars) are stored in /public/uploads. Feel free to back up this folder too:
+已上传的图片 (头像) 保存在 /public/uploads。请备份目录：
 
 .. code:: bash
 
