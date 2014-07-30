@@ -1,22 +1,22 @@
-Social Network SSOs
+社交网络 SSOs
 ==================
 
-NodeBB supports integration for Facebook, Twitter, and Google through third party plugins:
+通过第三方插件，NodeBB 支持整合 Facebook, Twitter 和 Google：
 
 * `npm install nodebb-plugin-sso-facebook`
 * `npm install nodebb-plugin-sso-twitter`
 * `npm install nodebb-plugin-sso-google`
 
-Other SSO vendors are available, such as GitHub. Please check the `plugin directory <http://community.nodebb.org/category/7/nodebb-plugins>`_ for a list of all SSO vendors.
+也支持其他的 SSO，例如 GitHub。所有 SSO 插件，请查看 `插件目录 <http://community.nodebb.org/category/7/nodebb-plugins>`_。
 
-After installing and activating them, they require an API key in order to function:
+在安装并激活插件后，它们需要 API 密钥才能工作：
 
 Facebook
 ---------
 
-Register an application via the `Facebook Developers <https://developers.facebook.com/>`_ page. A credit card  or mobile phone number may be required in order to create a Developer account.
+通过 `Facebook 开发者 <https://developers.facebook.com/>`_ 页面注册应用。可能需要使用信用卡或者移动电话号码，来创建开发者帐号。
 
-Create a new application, and obtain an Application Key and Application Secret:
+创建新应用，然后获得应用密码钥和应用密码：
 
 .. image:: http://i.imgur.com/hfy0eVo.png
 
