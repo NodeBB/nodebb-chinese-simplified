@@ -1,10 +1,10 @@
-Rendering Engine
+渲染引擎
 =================
 
-How it works
+工作原理
 ------------------------------------------------------
 
-Every page has an associated API call, Template file, and Language File.
+每个页面都有相关的 API 调用、模板文件和语言文件。
 
 For example, if you navigate to `/topic/351/nodebb-wiki <http://community.nodebb.org/topic/351/nodebb-wiki>`_, the application will load three resources. The API return `/api/topic/351/nodebb-wiki <http://community.nodebb.org/api/topic/351/nodebb-wiki>`_ and the `template <http://community.nodebb.org/templates/topic.tpl>`_, in this example, "topic.tpl", and the appropriate `language file <community.nodebb.org/language/en_GB/topic.json>`_ "topic.json"*.
 
