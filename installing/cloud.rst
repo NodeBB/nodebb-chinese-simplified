@@ -1,7 +1,7 @@
 云端安装 NodeBB
 ==============================
 
-下面的内容会指导你采用流行的 PaaS 解决方案一步一步在云端建立和运行 NodeBB。
+下面的内容会指导你采用流行的 PaaS(平台即服务) 解决方案一步一步在云端建立和运行 NodeBB。
 
 .. 注意::
 
@@ -20,4 +20,6 @@
 * :doc:`Cloud9 <cloud/cloud9>`
 * :doc:`Openshift <cloud/openshift>`
 * :doc:`Nitrous.IO <cloud/nitrous>`
-* `Digital Ocean <http://burnaftercompiling.com/nodebb/setting-up-a-nodebb-forum-for-dummies/>`_ (外部链接)
+* `Digital Ocean <http://burnaftercompiling.com/nodebb/setting-up-a-nodebb-forum-for-dummies/>`_ (外站链接)
+* :doc:`Koding.com <cloud/koding>`
+* `Codio <https://codio.com/s/docs/specifics/nodebb/>`_ (外站链接)
