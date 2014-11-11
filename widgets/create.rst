@@ -1,9 +1,9 @@
-Writing Widgets for NodeBB
+编写 NodeBB 组件
 ==========================
 
 See the original `blog post <http://blog.nodebb.org/widgets-system/>`_ for a high level overview and screenshots of the widget system.
 
-Embedding HTML and JavaScript
+嵌入 HTML 和 JavaScript
 -----------------------------
 
 You don't need to be a developer to figure this out. Head over to the Themes control panel and click on the Widgets tab. Create a new HTML widget by dragging and dropping the widget onto whatever template you want. 
@@ -15,7 +15,7 @@ You can optionally give your widget a container by dragging and dropping from th
 If you're looking for some sample scripts, head over to our `plugins section <http://community.nodebb.org/category/7/nodebb-plugins>`_ and look for any topic labelled ``nodebb-script-xyz``. Don't forget to submit your scripts and ideas as well!
 
 
-Creating Widgets
+创建组件
 -----------------------------
 
 You can define widgets in both plugins and themes. If you're building a plugin which simply delivers a widget (or collection of widgets), we strongly suggest you follow the ``nodebb-widget-xyz`` nomenclature instead when publishing.
@@ -42,7 +42,7 @@ Pass this back in the array:
 
 ``Content`` defines the form that is displayed to customize your widget in the admin panel.
 
-Listening to your widget
+监听你的组件
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 NodeBB core will call your widget on the appropriate page load by way of the hooks system. The hook will be named after your widget's namespace (see previous example) - like so: ``filter:widget.render:widget_namespace``
@@ -52,7 +52,7 @@ This will pass in an object with the following useful properties:
 * ``obj.area`` - will have ``location``, ``template``, ``url``
 * ``obj.data`` - will have your admin-defined data; in the example from the previous section you will be exposed an ``obj.data.myKey``
 
-Defining Widget Areas in Themes
+在主题中定义组件区域
 ------------------------------------
 
 A Widget Area is characterized by a template and a location. Themes can share widgets if they define the same Widget Areas. If an admin switches themes, widgets that were previously defined in a Widget Area incompatible with the new theme are saved.
