@@ -1,7 +1,7 @@
 升级 NodeBB
 ======================
 
-NodeBB 定期发布版本于 `发布版 <https://github.com/NodeBB/NodeBB/releases>`_。 这些发布版包含高质量的代码，可用于生产环境部署。
+NodeBB 定期在 `发布版本页面 <https://github.com/NodeBB/NodeBB/releases>`_ 中发布新版。 这些发布版包含高质量的代码，可用于生产环境部署。
 
 你可以使用 git 安装指定版本的 NodeBB，以及周期性升级到新发布版。
 
@@ -19,18 +19,19 @@ NodeBB 的升级路径设计为，在不同版本之间升级是直接的。Node
 
 *例如，从 v0.1.0 升级到 v0.1.1*
 
-Patch revisions contain bugfixes and other minor changes. Updating to the latest version of code for your specific version branch is all that is usually required.
+补丁版本包含错误修正和其他小的改动。需要升级到你所在小版本序列中的最新补丁版本。
 
-**执行第1步到第3步。**
+**执行“升级步骤”一节的第1步到第3步。**
 
 在小版本之间升级
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
 *例如，从 v0.1.3 升级到 v0.2.0*
 
-Minor revisions contain new features or substantial changes that are still backwards compatible. They may also contain dependent packages that require upgrading, and other features may be deprecated (but would ideally still be supported).
+小版本包含一些新的特性和重要的改动，但会保持向后兼容。
+其中可能涉及到依赖软件包的升级，而且其他特性有可能废弃（但是还是支持的，只会通过日志中提醒）
 
-Execute steps 1 through 4.
+执行“升级步骤”一节的第1步到第4步。
 
 ..  (the block below was commented out in original, so I'm leaving it commented out)
 	Upgrading between major revisions
@@ -50,7 +51,7 @@ Execute steps 1 through 4.
 1. 关闭论坛
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-While it is possible to upgrade NodeBB while it is running, it is definitely not recommended, particularly if it is an active forum:
+虽然可以在 NodeBB 运行是进行升级，但是很明显不推荐这种做法，尤其是对活跃的论坛而言。
 
 .. code:: bash
 
