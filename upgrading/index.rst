@@ -46,7 +46,7 @@ NodeBB 的升级路径设计为，在不同版本之间升级是直接的。Node
 升级步骤
 -------------------
 
-**提示**: After upgrading between revisions (i.e. v0.0.4 to v0.0.5), it may be necessary to run the following upgrade steps to ensure that any data schema changes are properly upgraded as well:
+**提示**: 在小版本中升级后 (例如 v0.0.4 到 v0.0.5), 也有可能需要执行下面的升级步骤，以确保数据结构能正确的升级:
 
 1. 关闭论坛
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -64,7 +64,7 @@ NodeBB 的升级路径设计为，在不同版本之间升级是直接的。Node
 
 .. note:: 
 
-	此节未完成，请正确备份你的文件！
+	此节并不完整，请小心并正确地备份你的文件！
 
 
 备份 Redis
