@@ -1,7 +1,7 @@
 MongoDB
 =======
 
-If you're afraid of running out of memory by using Redis, or want your forum to be more easily scalable, you can install NodeBB with MongoDB. This tutorial assumes you know how to SSH into your server and have root access.
+如果你担心使用 Redis 会内存耗尽，或者想要论坛更容易扩展，你可以使用 MongoDB 做 NodeBB 的数据库。This tutorial assumes you know how to SSH into your server and have root access.
 
 **These instructions are for Ubuntu. Adjust them accordingly for your distro.**
 
