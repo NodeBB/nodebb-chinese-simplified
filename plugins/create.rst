@@ -1,16 +1,16 @@
 编写 NodeBB 插件
 ==========================
 
-这么说，您要给 NodeBB 写插件，棒极了！在编写插件前，你应该了解一些有帮助的东西。
+要写 NodeBB 插件，棒极了！在这之前，你需要知道一些东西。
 
-和 WordPress 类似，NodeBB 的插件搭建在 NodeBB 的钩子系统上。钩子系统，通过可控制的方式，把部分 NodeBB 功能开放给插件开发者，可以允许插件更改内容，或者在条件触发时执行指定的行为。
+和 WordPress 类似，NodeBB 的插件搭建在 NodeBB 的钩子系统上。钩子系统，通过可控制的方式，把 NodeBB 的部分功能开放给插件开发者，允许插件更改内容，或者触发确定的行为。
 
 更多信息请查看全部 :doc:`钩子列表 <hooks>`。
 
 过滤器、动作
 ------------------
 
-有两类钩子：**过滤器** 和 **执行器**。
+有两种类型的钩子：**过滤器** 和 **执行器**。
 
 **过滤器** 作用于内容。当内容在 NodeBB 中传递时，你可以进行修改。例如，可以用过滤器修改帖子内容，比如把帖子中出现的所有“苹果”更改为“橙子”。类似地，可以用过滤器美化内容（比如代码过滤器），或者移除粗口（粗口过滤器）。
 
@@ -29,9 +29,6 @@
 .. code:: json
 
     {
-        "id": "my-plugin",
-        "name": "我的酷毙插件",
-        "description": "您插件的描述",
         "url": "您插件的地址或者 Github 代码库",
         "library": "./my-plugin.js",
         "staticDirs": {
@@ -44,10 +41,12 @@
             { "hook": "filter:post.save", "method": "filter" },
             { "hook": "action:post.save", "method": "emailme" }
         ],
-        "languages": "path/to/languages"
-    }
+        "languages": "path/to/languages",
+         "nbbpm: {
+            { "compatibility": "^0.7.0" }
+        }
+   }
 
-``id`` 属性是唯一的名称，用来标识插件。
 
 ``library`` 属性是库相对插件包目录的路径。NodeBB 会自动加载库（如果插件处于激活状态）。
 
@@ -66,6 +65,9 @@
 
 ``languages`` 属性是可选的。通过它可以设置插件或主题的多语言支持。建议和核心代码相似的目录结构，例如：``language/en_GB/myplugin.json``。
 
+``nbbpm`` 属性是一个对象，包含 NodeBB 包管理器的信息。
+
+* ``compatibility`` 指定了插件兼容的 NodeBB 版本。
 
 编写插件库
 ------------------
@@ -142,3 +144,13 @@ v0.0.5 版中，把插件放入 ``/plugins`` 目录来进行"安装"，依然是
 .. code::
 
     ./nodebb reset plugin="nodebb-plugin-im-broken"
+
+不使用 `nodebb` 脚本，也可以禁用插件，你可以使用下面的 node 调用:
+
+.. code::
+
+    node app.js --reset --plugins
+    
+.. code::
+
+    node app.js --reset --plugin="nodebb-plugin-im-broken"
