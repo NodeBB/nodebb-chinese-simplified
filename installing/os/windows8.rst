@@ -9,6 +9,8 @@ Windows 8
 * https://windows.github.com/
 * http://nodejs.org/
 * http://sourceforge.net/projects/redis/files/redis-2.6.10/
+* http://imagemagick.org/script/binary-releases.php#windows/
+* https://www.python.org/ftp/python/2.7.8/python-2.7.8.msi
 
 你可能需要重启电脑。
 
@@ -27,7 +29,7 @@ Windows 8
 
 .. code:: bash
 
-    git clone https://github.com/NodeBB/NodeBB.git
+    git clone -b v0.7.x https://github.com/NodeBB/NodeBB.git
 
 进入目录: 
 
@@ -45,7 +47,7 @@ Windows 8
 
 .. code:: bash
 
-    node app.js
+    node app.js --setup
 
 可以默认安装过程中的所有选项。
 
