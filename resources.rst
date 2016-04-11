@@ -4,7 +4,7 @@
 
 .. note::
 
-	This section is under construction.
+	本节未完成。
 
 
 Core
