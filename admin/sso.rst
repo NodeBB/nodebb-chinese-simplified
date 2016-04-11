@@ -14,32 +14,32 @@
 Facebook
 ---------
 
-通过 `Facebook 开发者 <https://developers.facebook.com/>`_ 页面注册应用。可能需要使用信用卡或者移动电话号码，来创建开发者帐号。
+通过 `Facebook 开发者 <https://developers.facebook.com/>`_ 页面注册应用。可能需要使用信用卡或者移动电话号码，来创建开发者帐号：
 
 创建新应用，然后获得应用密码钥和应用密码：
 
 .. image:: http://i.imgur.com/hfy0eVo.png
 
-Ensure that "Website with Facebook Login" is checked, and that the URL to your NodeBB instance is specified in the "Site URL" box. Add that site's domain to the "App Domains" field.
+确保 "Website with Facebook Login" 被选中, 并且您 NodeBB 的 URL 在 "Site URL" 中指定. 添加网站域名到 "App Domains" 中.
 
-Paste this key and secret into the appropriate boxes in the NodeBB Administration Panel (accessible via /admin on your NodeBB install)
+将 Application ID  和 Secret 粘贴到 ACP 中相应的位置 （通过您的 NodeBB install / admin访问）
 
 Twitter
 ---------
 
-Register an application at the `Twitter Developers <https://dev.twitter.com/>`_ page. Create a new Application, and obtain the Access Token and Secret:
+通过 `Twitter 开发者 <https://dev.twitter.com/>`_ 页面. 创建一个新的应用, 并且获得 Access Token 和 Secret：
 
 .. image:: http://i.imgur.com/ksrHkgN.png
 
-**Important**: While setting up your application, be sure to specify a Callback URL. It does not have to correspond to your installation, it just cannot be blank.
+**重要**: 在设置应用程序时，一定要指定一个回调的地址。 这个地址不一定非要和您的安装地址一致，但是不能为空。
 
-Paste this token and secret into the appropriate boxes in the NodeBB Administration Panel (accessible via /admin on your NodeBB install)
+将 Application ID  和 Secret 粘贴到 ACP 中相应的位置 （通过您的 NodeBB install / admin访问）
 
 Google
 ---------
 
-Register an application at the `Google API Console <https://code.google.com/apis/console/>`_, and obtain a Client ID and Secret.
+通过 `Google API 控制台 <https://code.google.com/apis/console/>`_, 一个新的应用, 并且获得 Client ID 和 Secret：
 
 .. image:: http://i.imgur.com/xutDs1R.png
 
-Paste this ID and secret into the appropriate boxes in the NodeBB Administration Panel (accessible via /admin on your NodeBB install)
+将 Application ID  和 Secret 粘贴到 ACP 中相应的位置 （通过您的 NodeBB install / admin访问）
